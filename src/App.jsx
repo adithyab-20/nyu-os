@@ -1,11 +1,20 @@
-function App() {
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Navbar } from './components';
+import { Home, HomeworkList, HomeworkDetails } from './pages';
+
+const App = () => {
   return (
-    <div>
-      <h1 class="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-    </div>
+    <Router>
+      <div className="min-h-screen bg-gray-50">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/homework" element={<HomeworkList />} />
+          <Route path="/homework/:id" element={<HomeworkDetails />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
