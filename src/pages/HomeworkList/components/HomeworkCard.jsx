@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 
 const HomeworkCard = ({ number, title, description }) => {
-
   return (
     <Link 
       to={`/homework/hw${number}`}

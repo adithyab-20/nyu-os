@@ -12,8 +12,8 @@ const MarkdownContent = ({ file }) => {
   }, [file]);
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="prose prose-lg max-w-none bg-white rounded-xl p-10 shadow-sm">
+    <div className="container mx-auto p-4">
+      <div className="prose prose-lg max-w-none">
         <ReactMarkdown>{content}</ReactMarkdown>
       </div>
     </div>

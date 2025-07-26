@@ -1,5 +1,5 @@
-import { Hero } from '../../components';
-import { homeworkData } from './data';
+import { Hero } from '@/components';
+import { homeworkList } from '@/data';
 import { HomeworkCard } from './components';
 
 const HomeworkList = () => {
@@ -11,10 +11,10 @@ const HomeworkList = () => {
         />
 
         <div className="grid md:grid-cols-1 gap-8">
-            {homeworkData.map((homework) => (
+            {Object.values(homeworkList).map((homework) => (
                 <HomeworkCard
-                key={homework.number}
-                {...homework}
+                  key={homework.number}
+                  {...homework}
                 />
             ))}
         </div>

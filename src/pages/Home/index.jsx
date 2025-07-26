@@ -1,4 +1,4 @@
-import { Hero } from '../../components';
+import { Hero } from '@/components';
 import { ProfessorInfo, CourseInfo } from './components';
 
 const Home = () => {

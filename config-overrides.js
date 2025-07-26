@@ -10,5 +10,11 @@ module.exports = function override(config, env) {
     }
   });
 
+  // Add @ alias for src directory
+  config.resolve.alias = {
+    ...config.resolve.alias,
+    '@': path.resolve(__dirname, 'src')
+  };
+
   return config;
 }; 
