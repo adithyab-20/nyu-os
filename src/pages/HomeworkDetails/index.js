@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { homeworkData } from './data'
-import { Hero, Concepts, Requirements } from '../../components';
-import { BackButton, MethodCard, FAQ } from './components';
+import { Hero } from '../../components';
+import { BackButton, MethodCard, FAQ, Requirements } from './components';
 
 const HomeworkDetails = () => {
   const { id } = useParams();
@@ -27,8 +27,6 @@ const HomeworkDetails = () => {
       />
 
       <div className="bg-white rounded-xl p-10 shadow-sm">
-        <Concepts concepts={homework.concepts} />
-        
         <p className="text-gray-600 mb-8">
           <strong className="text-gray-900">Objective:</strong> {homework.objective}
         </p>

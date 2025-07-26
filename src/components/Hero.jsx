@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Hero = ({ title, subtitle }) => {
   return (
     <div className="text-center mb-16">
