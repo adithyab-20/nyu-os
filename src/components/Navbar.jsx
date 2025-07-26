@@ -34,6 +34,18 @@ const Navbar = () => {
               Homework Assignments
             </Link>
           </li>
+          <li>
+            <Link 
+              to="/installations" 
+              className={`font-medium transition-colors ${
+                location.pathname.includes('/installations') 
+                ? 'text-purple-800' 
+                : 'text-gray-600 hover:text-purple-800'
+              }`}
+            >
+              Installations
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>

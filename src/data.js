@@ -1,13 +1,26 @@
 export const homeworkList = {
     hw0: {
         number: 0,
-        title: 'Development Environment Setup',
-        description: 'Set up your development environment using either GitHub Codespaces or Docker. Learn essential command-line tools and version control basics.',
+        title: 'Getting familiar with xv6',
+        description: 'Get familiar with the xv6 operating system and its development environment.',
     },
     hw1: {
         number: 1,
-        title: 'Implement Tail Command',
-        description: 'Create a C implementation of the Unix tail command with support for multiple files and command-line options.',
+        title: 'Implementing unix tail command in xv6',
+        description: 'Implement a simplified version of the Unix tail command in xv6.',
+    }
+}
+
+export const installationList = {
+    install1: {
+        number: 1,
+        title: '[Cloud] Setting up xv6 with GitHub Codespaces',
+        description: 'Set up your development environment using GitHub Codespaces. Learn essential command-line tools and version control basics.',
+    },
+    install2: {
+        number: 2,
+        title: '[Local] Setting up xv6 using a Docker Container',
+        description: 'Set up your development environment using a Docker container. Learn essential command-line tools and version control basics.',
     }
 }
 

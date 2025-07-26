@@ -6,7 +6,8 @@ This guide will introduce you to the xv6 Operating System, how to get it up and 
 xv6 is a toy/teaching operating system that was built at MIT for their Operating Systems course. It's based on Sixth Edition Unix (v6), which was originally built for the PDP-11. Unlike Sixth Edition Unix though, it runs on x86 and later also on RISC-V. We'll be using the x86 version.
 
 * xv6 Repository (x86 version): [https://github.com/mit-pdos/xv6-public](https://github.com/mit-pdos/xv6-public)
-  **Note:** Be careful not to use the RISC-V version, which is in a different repo.
+
+  > **Note:** Be careful not to use the RISC-V version, which is in a different repo.
 
 ### Why xv6?
 
@@ -41,14 +42,14 @@ QEMU emulates the CPU loop (fetch-decode-execute) and boots xv6 like real hardwa
 
 We provide two ways to get xv6 running. Pick one:
 
-1. **\[Cloud]** Using GitHub Codespaces: *\[Cloud] Setting up xv6 with GitHub Codespaces*
-2. **\[Local]** Using Docker: *\[Local] Setting up xv6 using a Docker Container*
+1. [**\[Cloud\]:** Using GitHub Codespaces](/installations/install1)
+1. [**\[Local\]:** Using Docker](/installations/install2)
 
 Both ensure consistent development environments.
 
 ---
 
-## Assignment 0: Getting Familiar with xv6
+## Assignment
 
 You’ve gotten xv6 running. Now let's try writing a simple program for it.
 
@@ -80,73 +81,3 @@ Look at `echo.c`, `cat.c`, `wc.c`, `ls.c`. Ask:
 * Edit the `Makefile`: add `_hello` to the `UPROGS` list
 * Rebuild: `make`, then `make qemu-nox`
 * Run: type `hello` in xv6 shell
-
----
-
-## Assignment 1: Implementing Unix `tail` in xv6
-
-### Goal
-
-Implement a `tail` command that prints the last few lines of input or a file.
-
-### Requirements
-
-* `tail filename`: last 10 lines
-* `tail -n NUM filename`: last NUM lines
-* `tail -NUM filename`: shorthand
-* `tail` (no args): read from stdin
-* Must work in **pipe chains**
-
-### Examples
-
-```bash
-$ tail README                        # Last 10 lines
-$ tail -5 README                     # Last 5 lines
-$ tail -n 3 README                   # Last 3 lines
-$ cat README | tail -2              # Last 2 lines via pipe
-$ ls | tail                         # Last 10 files
-$ cat README | grep "make" | tail -3  # With grep
-```
-
-### Integration
-
-* Create `tail.c` in xv6
-* Add `_tail` to `UPROGS` in the Makefile
-* Build with `make clean && make qemu-nox`
-* Test thoroughly
-
----
-
-## Grading Rubric (100 points)
-
-### Correctness (80 pts)
-
-* File reading and default 10-line output
-* Handle `-n NUM` and `-NUM`
-* Support stdin and pipes
-* Handle edge cases (empty file, too many lines)
-
-### Error Handling (10 pts)
-
-* Invalid args
-* File errors
-* Meaningful error messages
-
-### Implementation Quality (5 pts)
-
-* Clean, readable code
-* No memory leaks
-* Effective use of xv6 system calls
-
-### Documentation & Testing (5 pts)
-
-* Comments for complex code
-* Evidence of thorough testing
-* Meets submission requirements
-
----
-
-## Submission
-
-Submit `tail_<netid>.c` and a brief testing summary (PDF with screenshots is fine).
-Your code **must compile and run** correctly in xv6.

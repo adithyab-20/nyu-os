@@ -1,20 +1,19 @@
 import { useParams } from 'react-router-dom';
-import { homeworkFaqs, homeworkList } from '@/data';
 import { Hero, MarkdownContent } from '@/components';
 import { BackButton, FAQ } from './components';
 
-const HomeworkDetails = () => {
+const Details = ({ list, faqs, nav }) => {
   const { id } = useParams();
-  const faqs = homeworkFaqs[id];
+  const faqItems = faqs[id] || [];
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <BackButton to="/homework" />
+      <BackButton nav={nav} />
 
       <div className="mt-12">
         <Hero 
-          title={homeworkList[id].title}
-          subtitle={homeworkList[id].description}
+          title={list[id].title}
+          subtitle={list[id].description}
         />
       </div>
 
@@ -22,11 +21,13 @@ const HomeworkDetails = () => {
         <MarkdownContent file={id} />
       </div>
 
-      <div className="p-10 mx-auto max-w-3xl">
-        <FAQ items={faqs} />
-      </div>
+      {faqItems && faqItems.length > 0 && (
+        <div className="p-10 mx-auto max-w-3xl">
+          <FAQ items={faqItems} />
+        </div>
+      )}
     </div>
   );
 };
 
-export default HomeworkDetails; 
+export default Details; 
