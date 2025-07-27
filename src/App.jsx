@@ -6,7 +6,7 @@ import { homeworkList, installationList, xv6DevResourcesList, homeworkFaqs, xv6D
 const App = () => {
   return (
     <Router basename="/nyu-os">
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

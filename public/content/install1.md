@@ -32,6 +32,9 @@ Create your own private copy of the xv6 source code:
    * Set it to **Private**
    * Copy the repository URL (e.g., `https://github.com/yourusername/xv6-os.git`)
 
+  ![Create new repository](/nyu-os/content/images/install1-1-create-new-repo.png)
+  
+   
 2. **Clone the original xv6 repository locally**
 
 ```bash
@@ -55,6 +58,8 @@ git remote add origin https://github.com/yourusername/xv6-os.git
 git push --set-upstream origin master
 ```
 
+![Check remote repositiory via terminal](/nyu-os/content/images/install1-2-check-remote.png)
+
 ### Step 2: Create Your Codespace
 
 Set up your cloud development environment:
@@ -62,6 +67,8 @@ Set up your cloud development environment:
 * Go to your `xv6-os` repository on GitHub
 * Click the green **"Code"** button > **"Codespaces"** tab
 * Click **"Create codespace on master"**
+
+![Create your codespace](/nyu-os/content/images/install1-3-create-your-codespace.png)
 
 Alternatively:
 
@@ -94,6 +101,8 @@ make
 ```
 
 You may get a compiler error due to modern GCC versions.
+
+![Compilation error](/nyu-os/content/images/install1-4-compilation-error.png)
 
 To resolve:
 

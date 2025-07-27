@@ -21,6 +21,9 @@ $ ls | tail                         # Last 10 files
 $ cat README | grep "make" | tail -3  # With grep
 ```
 
+![Example output showing working with stdin on xv6](/nyu-os/content/images/hw1-1-example-output-working-with-stdin-on-xv6.png)
+
+
 ### Integration
 
 * Create `tail.c` in xv6
