@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/nyu-os/static/css/main.922e1ebe.css",
+    "main.js": "/nyu-os/static/js/main.3c49cfa9.js",
+    "index.html": "/nyu-os/index.html",
+    "main.922e1ebe.css.map": "/nyu-os/static/css/main.922e1ebe.css.map",
+    "main.3c49cfa9.js.map": "/nyu-os/static/js/main.3c49cfa9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.922e1ebe.css",
+    "static/js/main.3c49cfa9.js"
+  ]
+}
