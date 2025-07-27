@@ -48,7 +48,11 @@ Open a terminal and run:
 docker pull ab12095/xv6-x86
 ```
 
-**Apple Silicon Users:** If you get an error, run:
+**Apple Silicon Users:** If you get an error:
+
+![Image not found error](/nyu-os/content/images/install2-1-image-not-found-error.png)
+
+Then run:
 
 ```bash
 docker pull --platform linux/amd64 ab12095/xv6-x86
@@ -56,11 +60,15 @@ docker pull --platform linux/amd64 ab12095/xv6-x86
 
 You may get a warning—this is expected as it's emulating x86.
 
+![Image pull success](/nyu-os/content/images/install2-2-image-pull-success.png)
+
 ### Step 3: Run the Container
 
 ```bash
 docker run -it ab12095/xv6-x86
 ```
+
+![Run container success](/nyu-os/content/images/install2-3-image-run-success.png)
 
 This creates and runs the container interactively.
 
@@ -87,6 +95,10 @@ Run xv6:
 make qemu-nox  # Console version (recommended)
 make qemu      # Graphical version
 ```
+
+![Run xv6](/nyu-os/content/images/install2-4-run-xv6.png)
+
+![Run command in xv6](/nyu-os/content/images/install2-5-run-command-in-xv6.png)
 
 **Exit xv6:**
 
@@ -120,30 +132,40 @@ This helps reduce concurrency issues during debugging.
 
 ## Setting Up Visual Studio Code Integration (Recommended)
 
-1. Install **VS Code** and **Dev Containers** extension
-2. Start your container:
+Coding in the terminal isn't ideal for larger projects. Here's how to set up VS Code for a much better development experience:
 
-```bash
-docker start -ai <container_id>
-```
+1. Install VS Code from the official website.
+2. Install the **Dev Container extension** - this lets VS Code connect to Docker containers
 
-3. Attach VS Code:
+   ![Install Dev Container extension](/nyu-os/content/images/install2-6-vs-code-extension.png)
 
-   * Open Command Palette (Cmd+Shift+P or Ctrl+Shift+P)
+3. Open up a terminal and start your container with `docker start -ai <container_id>`
+
+3. Connect VS Code to the container
+
+   * Open Visual Studio Code
+   * Open Command Palette (`Cmd+Shift+P` or `Ctrl+Shift+P`)
    * Select: `Dev Containers: Attach to Running Container`
    * Pick your xv6 container
 
-4. Inside VS Code:
+   ![Find your xv6 container from extension](/nyu-os/content/images/install2-7-find-vs-code-extension.png)
 
-   * Navigate to `xv6-public` folder
-   * Open terminal: **Terminal → New Terminal**
-   * Confirm you're in `/home/a/xv6-public`
+4. Configure your workspace
+   * VS Code will open a remote connection to your container
+   * Navigate to the xv6-public folder if not automatically opened
+   * Open the integrated terminal: Terminal → New Terminal
+   * Verify you're in the correct directory (`/home/a/xv6-public`)
+
+   ![Configure your workspace](/nyu-os/content/images/install2-8-vs-code-1.png)
 
 5. Build and run:
 
 ```bash
 make && make qemu-nox
 ```
+
+![Build and run](/nyu-os/content/images/install2-9-vs-code-2.png)
+
 
 Now you can develop and test xv6 entirely within VS Code!
 
@@ -156,4 +178,4 @@ You now have a fully functional, **locally hosted**, containerized xv6 developme
 * Explore kernel internals
 * Recover quickly from crashes
 
-**Pro tip:** You can always create a new container to reset your environment if things go wrong.
+**The best part?**  If something goes wrong, you can always start fresh with a new container without affecting your host system!

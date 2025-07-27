@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/nyu-os/static/css/main.922e1ebe.css",
-    "main.js": "/nyu-os/static/js/main.5bf12266.js",
+    "main.js": "/nyu-os/static/js/main.bae416e3.js",
     "index.html": "/nyu-os/index.html",
     "main.922e1ebe.css.map": "/nyu-os/static/css/main.922e1ebe.css.map",
-    "main.5bf12266.js.map": "/nyu-os/static/js/main.5bf12266.js.map"
+    "main.bae416e3.js.map": "/nyu-os/static/js/main.bae416e3.js.map"
   },
   "entrypoints": [
     "static/css/main.922e1ebe.css",
-    "static/js/main.5bf12266.js"
+    "static/js/main.bae416e3.js"
   ]
 }
