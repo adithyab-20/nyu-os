@@ -36,14 +36,26 @@ const Navbar = () => {
           </li>
           <li>
             <Link 
-              to="/installations" 
+              to="/installation" 
               className={`font-medium transition-colors ${
-                location.pathname.includes('/installations') 
+                location.pathname.includes('/installation') 
                 ? 'text-purple-800' 
                 : 'text-gray-600 hover:text-purple-800'
               }`}
             >
-              Installations
+              Installation
+            </Link>
+          </li>
+          <li>
+            <Link 
+              to="/xv6-dev-resources" 
+              className={`font-medium transition-colors ${
+                location.pathname.includes('/xv6-dev-resources') 
+                ? 'text-purple-800' 
+                : 'text-gray-600 hover:text-purple-800'
+              }`}
+            >
+              xv6 Development Resource
             </Link>
           </li>
         </ul>

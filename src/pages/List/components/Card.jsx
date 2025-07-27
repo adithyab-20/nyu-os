@@ -5,8 +5,8 @@ const Card = ({ number, title, description, nav }) => {
 
   if (nav === 'homework') {
     link = `/homework/hw${number}`;
-  } else if (nav === 'installations') {
-    link = `/installations/install${number}`;
+  } else if (nav === 'installation') {
+    link = `/installation/install${number}`;
   }
 
   return (

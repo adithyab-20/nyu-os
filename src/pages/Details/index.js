@@ -3,7 +3,12 @@ import { Hero, MarkdownContent } from '@/components';
 import { BackButton, FAQ } from './components';
 
 const Details = ({ list, faqs, nav }) => {
-  const { id } = useParams();
+  let { id } = useParams();
+
+  if (id === undefined) {
+    id = 'xv6-dev-resources';
+  }
+  
   const faqItems = faqs[id] || [];
 
   return (

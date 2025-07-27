@@ -42,8 +42,8 @@ QEMU emulates the CPU loop (fetch-decode-execute) and boots xv6 like real hardwa
 
 We provide two ways to get xv6 running. Pick one:
 
-1. [**\[Cloud\]:** Using GitHub Codespaces](/installations/install1)
-1. [**\[Local\]:** Using Docker](/installations/install2)
+1. [**\[Cloud\]:** Using GitHub Codespaces](/installation/install1)
+1. [**\[Local\]:** Using Docker](/installation/install2)
 
 Both ensure consistent development environments.
 
@@ -57,6 +57,7 @@ Resources:
 
 * [xv6 Source PDF](https://pdos.csail.mit.edu/6.828/2018/xv6/xv6-rev11.pdf)
 * [xv6 Book PDF](https://pdos.csail.mit.edu/6.828/2018/xv6/book-rev11.pdf)
+* [xv6 Development Resource](/xv6-dev-resources): *Go through this AFTER attempting Assignment 0*
 
 > **Note:** Be careful about mixing up x86 and RISC-V versions.
 

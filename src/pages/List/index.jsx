@@ -5,7 +5,7 @@ const List = ({ list, nav }) => {
   return (
     <div className="container mx-auto px-4 py-12">
         <Hero 
-            title={nav === 'homework' ? 'Homework Assignments' : 'Installations'}
+            title={nav === 'homework' ? 'Homework Assignments' : 'Installation'}
             subtitle={nav === 'homework' ? 'Click on any assignment to view detailed instructions and requirements' : 'Click on any installation to view detailed instructions and requirements'}
         />
 

@@ -24,6 +24,14 @@ export const installationList = {
     }
 }
 
+export const xv6DevResourcesList = {
+    "xv6-dev-resources": {
+        number: 1,
+        title: 'xv6 Development Resources',
+        description: 'Resources for developing xv6.',
+    }
+}
+
 export const homeworkFaqs = {
     hw0: [
         {
@@ -61,4 +69,26 @@ export const homeworkFaqs = {
             answer: 'A: Yes, you can use standard C library functions. However, make sure you understand how they work at the system call level, as this knowledge will be important for future assignments.'
         }
     ]
+};
+
+
+export const xv6DevResourcesFaqs = {
+    "xv6-dev-resources": [
+        {
+          "question": "Q: It won't compile!",
+          "answer": "A: Did you run `make clean` first? Are you in the correct directory? Did you modify the Makefile correctly? Are there syntax errors?"
+        },
+        {
+          "question": "Q: I can't exit QEMU!",
+          "answer": "A: Use Ctrl-A X. If you're stuck, kill the terminal and restart."
+        },
+        {
+          "question": "Q: My changes aren't showing up!",
+          "answer": "A: Run `make clean && make qemu-nox` and check that your program is listed in the `UPROGS` section of the Makefile."
+        },
+        {
+          "question": "Q: Docker/Container Problems!",
+          "answer": "A: \n- Container exits immediately: Ensure Docker Desktop is running and virtualization is enabled in BIOS (Windows).\n- Cannot connect Dev Containers: Restart Docker and verify the container is running with `docker ps`.\n- Lost work: Use `docker start -ai <container_id>`, do not reuse `docker run` after initial setup.\n- Stuck in xv6: Use Ctrl-A then x. If that fails, run `docker stop <container_id>`.\n- Exit properly: Exit xv6 with Ctrl-A then x, then type `exit` to leave the container."
+        }
+      ]
 };
