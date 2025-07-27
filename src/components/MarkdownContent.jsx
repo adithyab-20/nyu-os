@@ -5,7 +5,7 @@ const MarkdownContent = ({ file }) => {
   const [content, setContent] = useState('');
 
   useEffect(() => {
-    fetch(`/content/${file}.md`)
+    fetch(`/nyu-os/content/${file}.md`)
       .then(response => response.text())
       .then(text => setContent(text))
       .catch(err => console.error('Error loading markdown:', err));
